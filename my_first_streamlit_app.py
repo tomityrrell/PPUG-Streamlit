@@ -13,9 +13,9 @@ if image_upload:
     image_placeholder.image(image)
 
     # Apply pytesseract
-    if st.button("Activate the tesseract!!"):
+    if st.button("Activate the Dessert!!"):
         image_data = image_to_data(image, config="--psm 6", output_type=Output.DATAFRAME)
-        image_data = image_data[image_data.conf > 90].reset_index(drop=True)
+        image_data = image_data[image_data.conf > 90]
 
         # inspect dataframe results
         st.write(image_data)
